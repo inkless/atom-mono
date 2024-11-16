@@ -1,5 +1,5 @@
 function getGreeting() {
-  return "Hello Superman!";
+  return "Hello!";
 }
 
 export const greeting = getGreeting();
