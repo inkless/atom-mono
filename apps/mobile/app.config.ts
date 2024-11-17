@@ -5,14 +5,14 @@ const IS_PREVIEW = process.env.APP_VARIANT === "preview";
 
 const getUniqueIdentifier = () => {
   if (IS_DEV) {
-    return "com.atom.atom.dev";
+    return "com.atom.app.dev";
   }
 
   if (IS_PREVIEW) {
-    return "com.atom.atom.preview";
+    return "com.atom.app.preview";
   }
 
-  return "com.atom.atom";
+  return "com.atom.app";
 };
 
 const getAppName = () => {
@@ -33,7 +33,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   version: "1.0.0",
   orientation: "portrait",
   icon: "./assets/images/icon.png",
-  scheme: "myapp",
+  scheme: "atom",
   userInterfaceStyle: "automatic",
   newArchEnabled: true,
   ios: {
