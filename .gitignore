@@ -56,3 +56,5 @@ npm-debug.*
 web-build/
 cache/
 
+# Turbo
+.turbo
