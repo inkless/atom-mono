@@ -17,6 +17,19 @@ npm i -g turbo
 pnpm i
 ```
 
+2. Build a development client
+
+This app may not work with Expo Go since we installed some custom native
+modules, so you will have to build a expo-dev-client.
+
+```bash
+cd apps/mobile
+# this can take a while
+pnpm run ios
+# or android
+pnpm run android
+```
+
 2. Start the both web and mobile
 
 ```bash
@@ -27,6 +40,9 @@ You will be able to run both web and mobile together. Notice the mobile one
 is in interactive mode. So you could press `Enter` to enter interactive mode.
 If your turbo output is showing the `web#dev`, you could use up / down arrow to
 switch panel.
+
+I recommend to use iOS simulator to test things, so press `i` in the console.
+
 
 ## Learn more
 
