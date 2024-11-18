@@ -18,6 +18,14 @@ function LayoutComponent() {
           Home
         </Link>{' '}
         <Link
+          to="/onboard"
+          activeProps={{
+            className: 'font-bold',
+          }}
+        >
+          Onboard
+        </Link>
+        <Link
           to="/about"
           activeProps={{
             className: 'font-bold',

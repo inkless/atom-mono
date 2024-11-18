@@ -24,12 +24,22 @@ export default function EnvelopeScreen() {
       </ThemedView>
       <ThemedView>
         <Link style={styles.link} href="/envelope/home">
-          Envelope Home
+          Envelope Home with Cookie Share
         </Link>
       </ThemedView>
       <ThemedView>
         <Link style={styles.link} href="/envelope/about">
           Envelope About
+        </Link>
+      </ThemedView>
+      <ThemedView>
+        <Link style={styles.link} href="/webview/change">
+          Full Screen Envelope Home
+        </Link>
+      </ThemedView>
+      <ThemedView>
+        <Link style={styles.link} href="/webview/onboard">
+          Full Screen Envelope Onboard Custom Header
         </Link>
       </ThemedView>
     </ParallaxScrollView>

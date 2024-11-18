@@ -23,6 +23,8 @@ export default function AppLayout() {
   return (
     <Stack>
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      {/* <Stack.Screen name="webview" options={{ headerShown: false }} /> */}
+      <Stack.Screen name="webview" options={{ headerShown: false }} />
       <Stack.Screen name="+not-found" />
     </Stack>
   );
