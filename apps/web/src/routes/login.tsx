@@ -1,8 +1,13 @@
-import reactLogo from './assets/react.svg';
-import './App.css';
 import { useState } from 'react';
+import { createFileRoute } from '@tanstack/react-router';
+import reactLogo from '../assets/react.svg';
+import './login.css';
 
-function App() {
+export const Route = createFileRoute('/login')({
+  component: LoginComponent,
+});
+
+function LoginComponent() {
   const [token, setToken] = useState('my-token-123');
 
   const openApp = () => {
@@ -36,5 +41,3 @@ function App() {
     </>
   );
 }
-
-export default App;

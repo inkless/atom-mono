@@ -36,6 +36,15 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="envelope"
+        options={{
+          title: 'Envelope',
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="envelope.open.fill" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="explore"
         options={{
           title: 'Explore',

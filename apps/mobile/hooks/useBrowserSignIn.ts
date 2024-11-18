@@ -5,7 +5,7 @@ import { useRouter } from 'expo-router';
 import * as Browser from 'expo-web-browser';
 
 export const browserSignIn = async () => {
-  const signInUrl = `${getBaseUrl()}`;
+  const signInUrl = `${getBaseUrl()}/login`;
   const redirectTo = Linking.createURL('/login');
   const result = await Browser.openAuthSessionAsync(
     `${signInUrl}?atom-redirect=${encodeURIComponent(redirectTo)}`,
