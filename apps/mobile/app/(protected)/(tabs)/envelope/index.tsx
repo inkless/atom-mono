@@ -1,4 +1,5 @@
-import { StyleSheet, Image, Platform } from 'react-native';
+import { StyleSheet } from 'react-native';
+import { Link } from 'expo-router';
 
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
@@ -22,10 +23,14 @@ export default function EnvelopeScreen() {
         <ThemedText type="title">Envelope</ThemedText>
       </ThemedView>
       <ThemedView>
-        <ThemedText>Envelope Home</ThemedText>
+        <Link style={styles.link} href="/envelope/home">
+          Envelope Home
+        </Link>
       </ThemedView>
       <ThemedView>
-        <ThemedText>Envelope About</ThemedText>
+        <Link style={styles.link} href="/envelope/about">
+          Envelope About
+        </Link>
       </ThemedView>
     </ParallaxScrollView>
   );
@@ -41,5 +46,9 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
     gap: 8,
+  },
+  link: {
+    backgroundColor: '#f5501d',
+    padding: 10,
   },
 });

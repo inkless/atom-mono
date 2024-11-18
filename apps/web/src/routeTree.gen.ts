@@ -12,6 +12,7 @@
 
 import { Route as rootRoute } from './routes/__root'
 import { Route as LoginImport } from './routes/login'
+import { Route as CheckoutImport } from './routes/checkout'
 import { Route as PortalImport } from './routes/_portal'
 import { Route as PortalIndexImport } from './routes/_portal/index'
 import { Route as PortalAboutImport } from './routes/_portal/about'
@@ -21,6 +22,12 @@ import { Route as PortalAboutImport } from './routes/_portal/about'
 const LoginRoute = LoginImport.update({
   id: '/login',
   path: '/login',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const CheckoutRoute = CheckoutImport.update({
+  id: '/checkout',
+  path: '/checkout',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -50,6 +57,13 @@ declare module '@tanstack/react-router' {
       path: ''
       fullPath: ''
       preLoaderRoute: typeof PortalImport
+      parentRoute: typeof rootRoute
+    }
+    '/checkout': {
+      id: '/checkout'
+      path: '/checkout'
+      fullPath: '/checkout'
+      preLoaderRoute: typeof CheckoutImport
       parentRoute: typeof rootRoute
     }
     '/login': {
@@ -93,12 +107,14 @@ const PortalRouteWithChildren =
 
 export interface FileRoutesByFullPath {
   '': typeof PortalRouteWithChildren
+  '/checkout': typeof CheckoutRoute
   '/login': typeof LoginRoute
   '/about': typeof PortalAboutRoute
   '/': typeof PortalIndexRoute
 }
 
 export interface FileRoutesByTo {
+  '/checkout': typeof CheckoutRoute
   '/login': typeof LoginRoute
   '/about': typeof PortalAboutRoute
   '/': typeof PortalIndexRoute
@@ -107,6 +123,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/_portal': typeof PortalRouteWithChildren
+  '/checkout': typeof CheckoutRoute
   '/login': typeof LoginRoute
   '/_portal/about': typeof PortalAboutRoute
   '/_portal/': typeof PortalIndexRoute
@@ -114,20 +131,28 @@ export interface FileRoutesById {
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '' | '/login' | '/about' | '/'
+  fullPaths: '' | '/checkout' | '/login' | '/about' | '/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/login' | '/about' | '/'
-  id: '__root__' | '/_portal' | '/login' | '/_portal/about' | '/_portal/'
+  to: '/checkout' | '/login' | '/about' | '/'
+  id:
+    | '__root__'
+    | '/_portal'
+    | '/checkout'
+    | '/login'
+    | '/_portal/about'
+    | '/_portal/'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   PortalRoute: typeof PortalRouteWithChildren
+  CheckoutRoute: typeof CheckoutRoute
   LoginRoute: typeof LoginRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   PortalRoute: PortalRouteWithChildren,
+  CheckoutRoute: CheckoutRoute,
   LoginRoute: LoginRoute,
 }
 
@@ -142,6 +167,7 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/_portal",
+        "/checkout",
         "/login"
       ]
     },
@@ -151,6 +177,9 @@ export const routeTree = rootRoute
         "/_portal/about",
         "/_portal/"
       ]
+    },
+    "/checkout": {
+      "filePath": "checkout.tsx"
     },
     "/login": {
       "filePath": "login.tsx"

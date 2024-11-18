@@ -45,11 +45,20 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="browser"
         options={{
-          title: 'Explore',
+          title: 'Browser',
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="paperplane.fill" color={color} />
+            <IconSymbol size={28} name="network" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="server"
+        options={{
+          title: 'Server',
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="server.rack" color={color} />
           ),
         }}
       />

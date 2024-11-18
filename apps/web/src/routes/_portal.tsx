@@ -1,8 +1,8 @@
-import { Link, Outlet, createFileRoute } from '@tanstack/react-router'
+import { Link, Outlet, createFileRoute } from '@tanstack/react-router';
 
 export const Route = createFileRoute('/_portal')({
   component: LayoutComponent,
-})
+});
 
 function LayoutComponent() {
   return (
@@ -28,5 +28,5 @@ function LayoutComponent() {
       </div>
       <Outlet />
     </div>
-  )
+  );
 }

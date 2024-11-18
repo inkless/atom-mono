@@ -1,19 +1,17 @@
 import { useState } from 'react';
 import { createFileRoute } from '@tanstack/react-router';
 import reactLogo from '../assets/react.svg';
-import './login.css';
+import './checkout.css';
 
-export const Route = createFileRoute('/login')({
-  component: LoginComponent,
+export const Route = createFileRoute('/checkout')({
+  component: CheckoutComponent,
 });
 
-function LoginComponent() {
-  const [token, setToken] = useState('my-token-123');
+function CheckoutComponent() {
+  const [amount, setAmount] = useState('99.99');
 
-  const openApp = () => {
-    const query = new URLSearchParams(window.location.search);
-    const redirectTo = query.get('atom-redirect');
-    window.location.href = `${redirectTo}?access_token=${token}`;
+  const finish = () => {
+    alert(`Amount: ${amount}. Finish!`);
   };
 
   return (
@@ -23,20 +21,21 @@ function LoginComponent() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Atom Signin</h1>
+      <h1>Atom Checkout</h1>
       <div className="card">
-        <label>Token</label>
+        <label>Amount</label>
         <input
           type="text"
-          value={token}
+          pattern="[.0-9]*"
+          value={amount}
           style={{ fontSize: 16 }}
           onChange={(evt) => {
-            setToken(evt.target.value);
+            setAmount(evt.target.value);
           }}
         />
       </div>
       <div className="card">
-        <button onClick={openApp}>Sign In</button>
+        <button onClick={finish}>Finish</button>
       </div>
     </div>
   );
