@@ -58,3 +58,5 @@ cache/
 
 # Turbo
 .turbo
+
+.env
