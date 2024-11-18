@@ -13,6 +13,10 @@ export default function EnvelopeHome() {
 
   useEffect(() => {
     if (Platform.OS !== 'web') {
+      // Note, this is not very elegant, it kinda works, we may consider build a
+      // custom native module instead to set cookies
+      // Or maybe we should send Pull Request to react-native-webview to add
+      // this functionality
       CookieManager.set(getBaseUrl(), {
         name: 'session',
         value: session || '',
@@ -36,6 +40,9 @@ export default function EnvelopeHome() {
         source={{
           uri,
         }}
+        // This is not super reliable in Android
+        // https://github.com/react-native-webview/react-native-webview/issues/1609
+        // injectedJavaScript is reliable but it's always after page load.
         // injectedJavaScriptBeforeContentLoaded={`document.cookie="session=${session}"`}
         sharedCookiesEnabled={true}
       />

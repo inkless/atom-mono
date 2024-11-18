@@ -4,7 +4,7 @@ import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import { greeting } from '@rn/constants';
+import { greeting } from '@atom/constants';
 import { useSession } from '@/contexts/Auth';
 
 export default function HomeScreen() {
