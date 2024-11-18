@@ -1,40 +1,40 @@
-import type { ConfigContext, ExpoConfig } from "expo/config";
+import type { ConfigContext, ExpoConfig } from 'expo/config';
 
-const IS_DEV = process.env.APP_VARIANT === "development";
-const IS_PREVIEW = process.env.APP_VARIANT === "preview";
+const IS_DEV = process.env.APP_VARIANT === 'development';
+const IS_PREVIEW = process.env.APP_VARIANT === 'preview';
 
 const getUniqueIdentifier = () => {
   if (IS_DEV) {
-    return "com.atom.app.dev";
+    return 'com.atom.app.dev';
   }
 
   if (IS_PREVIEW) {
-    return "com.atom.app.preview";
+    return 'com.atom.app.preview';
   }
 
-  return "com.atom.app";
+  return 'com.atom.app';
 };
 
 const getAppName = () => {
   if (IS_DEV) {
-    return "Atom (Dev)";
+    return 'Atom (Dev)';
   }
 
   if (IS_PREVIEW) {
-    return "Atom (Preview)";
+    return 'Atom (Preview)';
   }
 
-  return "Atom: Your Fancy App";
+  return 'Atom: Your Fancy App';
 };
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
   name: getAppName(),
-  slug: "Atom",
-  version: "1.0.0",
-  orientation: "portrait",
-  icon: "./assets/images/icon.png",
-  scheme: "atom",
-  userInterfaceStyle: "automatic",
+  slug: 'Atom',
+  version: '1.0.0',
+  orientation: 'portrait',
+  icon: './assets/images/icon.png',
+  scheme: 'atom',
+  userInterfaceStyle: 'automatic',
   newArchEnabled: true,
   ios: {
     supportsTablet: true,
@@ -42,26 +42,26 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   },
   android: {
     adaptiveIcon: {
-      foregroundImage: "./assets/images/adaptive-icon.png",
-      backgroundColor: "#ffffff",
+      foregroundImage: './assets/images/adaptive-icon.png',
+      backgroundColor: '#ffffff',
     },
     package: getUniqueIdentifier(),
   },
   web: {
-    bundler: "metro",
-    output: "static",
-    favicon: "./assets/images/favicon.png",
+    bundler: 'metro',
+    output: 'static',
+    favicon: './assets/images/favicon.png',
   },
   plugins: [
-    "expo-router",
-    "expo-secure-store",
+    'expo-router',
+    'expo-secure-store',
     [
-      "expo-splash-screen",
+      'expo-splash-screen',
       {
-        image: "./assets/images/splash-icon.png",
+        image: './assets/images/splash-icon.png',
         imageWidth: 200,
-        resizeMode: "contain",
-        backgroundColor: "#ffffff",
+        resizeMode: 'contain',
+        backgroundColor: '#ffffff',
       },
     ],
   ],
@@ -70,8 +70,8 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   },
   extra: {
     eas: {
-      // projectId: "...",
+      projectId: '96db68ea-4718-4293-b16b-65b5bd2afffa',
     },
   },
-  owner: "inkless",
+  owner: 'inkless',
 });
