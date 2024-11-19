@@ -29,6 +29,12 @@
       "ios": {
         "simulator": true
       }
+    },
+    "ios-simulator-preview": {
+      "extends": "preview",
+      "ios": {
+        "simulator": true
+      }
     }
   },
   "submit": {
