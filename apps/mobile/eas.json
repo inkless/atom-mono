@@ -14,11 +14,15 @@
     "preview": {
       "distribution": "internal",
       "env": {
-        "APP_VARIANT": "preview"
+        "APP_VARIANT": "preview",
+        "EXPO_PUBLIC_WEB_URL": "https://atom-web-phi.vercel.app"
       }
     },
     "production": {
-      "autoIncrement": true
+      "autoIncrement": true,
+      "env": {
+        "EXPO_PUBLIC_WEB_URL": "https://atom-web-phi.vercel.app"
+      }
     },
     "ios-simulator": {
       "extends": "development",
