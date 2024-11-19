@@ -182,6 +182,9 @@ importers:
       '@tanstack/router-plugin':
         specifier: ^1.81.9
         version: 1.81.9(vite@5.4.11(@types/node@22.9.0)(lightningcss@1.27.0)(terser@5.36.0))(webpack@5.96.1)
+      '@types/node':
+        specifier: ^22.9.0
+        version: 22.9.0
       '@types/react':
         specifier: ^18.3.12
         version: 18.3.12
