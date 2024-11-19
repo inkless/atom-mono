@@ -27,7 +27,7 @@ export default function OnboardScreen() {
                 router.back();
               }}
             >
-              <IconSymbol size={29} color="#333" name="book.closed.fill" />
+              <IconSymbol size={29} color="#333" name="xmark" />
             </Pressable>
           ),
         }}

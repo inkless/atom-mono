@@ -13,8 +13,8 @@ export default function EnvelopeScreen() {
       headerImage={
         <IconSymbol
           size={310}
-          color="red"
-          name="envelope.open"
+          color="#bf221d"
+          name="envelope"
           style={styles.headerImage}
         />
       }

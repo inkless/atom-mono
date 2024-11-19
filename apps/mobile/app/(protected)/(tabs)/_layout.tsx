@@ -40,7 +40,7 @@ export default function TabLayout() {
         options={{
           title: 'Envelope',
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="envelope.open.fill" color={color} />
+            <IconSymbol size={28} name="envelope.fill" color={color} />
           ),
         }}
       />
@@ -58,7 +58,11 @@ export default function TabLayout() {
         options={{
           title: 'Server',
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="server.rack" color={color} />
+            <IconSymbol
+              size={28}
+              name="chevron.left.forwardslash.chevron.right"
+              color={color}
+            />
           ),
         }}
       />
