@@ -1,0 +1,5 @@
+appId: com.atom.app.preview
+---
+- tapOn: Home, tab, 1 of 4
+- tapOn: "Sign Out"
+

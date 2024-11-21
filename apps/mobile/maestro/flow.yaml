@@ -1,0 +1,24 @@
+appId: com.atom.app.preview
+---
+- launchApp
+- runFlow:
+    when:
+      notVisible: 'Sign In'
+    file: signout.yaml
+- tapOn: "Sign In"
+- assertVisible: "Your token: auto-sign-token"
+- tapOn: "Sign Out"
+- tapOn: "Sign In with Browser"
+- tapOn: "Continue"
+- tapOn: "my-token-123"
+- inputText: 456
+- tapOn: Atom Signin
+- tapOn: Sign In
+- tapOn: Envelope, tab, 2 of 4
+- tapOn: Envelope Home with Cookie Share
+- assertVisible: session=my-token-123456
+- tapOn: Onboard
+- tapOn: About
+- tapOn: Envelope
+- runFlow: signout.yaml
+
