@@ -4,7 +4,7 @@ appId: com.atom.app.preview
 - runFlow:
     when:
       notVisible: 'Sign In'
-    file: signout.yaml
+    file: auth/signout.yaml
 - tapOn: "Sign In"
 - assertVisible: "Your token: auto-sign-token"
 - tapOn: "Sign Out"
@@ -20,5 +20,5 @@ appId: com.atom.app.preview
 - tapOn: Onboard
 - tapOn: About
 - tapOn: Envelope
-- runFlow: signout.yaml
+- runFlow: auth/signout.yaml
 
