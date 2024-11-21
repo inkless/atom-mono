@@ -1,6 +1,5 @@
 import { StyleSheet, Pressable } from 'react-native';
 
-import { createURL, parse } from 'expo-linking';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';

@@ -1,9 +1,8 @@
 import { StyleSheet } from 'react-native';
 import { router, useLocalSearchParams } from 'expo-router';
-
-import { useSession } from '@/contexts/Auth';
-import { ThemedView } from '@/components/ThemedView';
 import { ThemedText } from '@/components/ThemedText';
+import { ThemedView } from '@/components/ThemedView';
+import { useSession } from '@/contexts/Auth';
 import { useBrowserSignIn } from '@/hooks/useBrowserSignIn';
 
 export default function SignIn() {
@@ -27,13 +26,7 @@ export default function SignIn() {
       >
         Sign In
       </ThemedText>
-      <ThemedText
-        onPress={() => {
-          browserSignIn();
-        }}
-      >
-        Sign In with Browser
-      </ThemedText>
+      <ThemedText onPress={browserSignIn}>Sign In with Browser</ThemedText>
     </ThemedView>
   );
 }

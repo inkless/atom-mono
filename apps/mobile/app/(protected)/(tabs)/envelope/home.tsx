@@ -1,10 +1,10 @@
-import { WebView } from 'react-native-webview';
+import { useEffect } from 'react';
 // import Constants from 'expo-constants';
 import { Platform, StyleSheet } from 'react-native';
-import { getBaseUrl } from '@/utils/baseUrl';
+import { WebView } from 'react-native-webview';
 import { Stack } from 'expo-router';
 import { useSession } from '@/contexts/Auth';
-import { useEffect } from 'react';
+import { getBaseUrl } from '@/utils/baseUrl';
 import CookieManager from '@react-native-cookies/cookies';
 
 export default function EnvelopeHome() {
@@ -19,7 +19,9 @@ export default function EnvelopeHome() {
       // this functionality
       CookieManager.set(getBaseUrl(), {
         name: 'session',
-        value: session || '',
+        value: session ?? '',
+      }).catch(() => {
+        // do something
       });
     }
   }, [session]);

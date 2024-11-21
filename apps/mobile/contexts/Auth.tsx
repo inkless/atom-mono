@@ -1,4 +1,5 @@
-import { useContext, createContext, type PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
+import { createContext, useContext } from 'react';
 import { useStorageState } from '@/hooks/useStorageState';
 
 const AuthContext = createContext<{
@@ -19,6 +20,7 @@ const AuthContext = createContext<{
 export function useSession() {
   const value = useContext(AuthContext);
   if (process.env.NODE_ENV !== 'production') {
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     if (!value) {
       throw new Error('useSession must be wrapped in a <SessionProvider />');
     }

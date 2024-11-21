@@ -45,6 +45,7 @@
     "react-native-webview": "13.12.2"
   },
   "devDependencies": {
+    "@atom/eslint-config": "workspace:*",
     "@babel/core": "^7.25.2",
     "@types/jest": "catalog:",
     "@types/react": "catalog:react18",

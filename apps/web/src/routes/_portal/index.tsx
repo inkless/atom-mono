@@ -11,7 +11,7 @@ function HomeComponent() {
     if (document.cookie) {
       setCookie(document.cookie);
     }
-  }, [document.cookie]);
+  }, []);
 
   const injectedObj = JSON.parse(
     window.ReactNativeWebView?.injectedObjectJson() || '{}',

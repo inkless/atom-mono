@@ -1,11 +1,12 @@
+import type { ImageSourcePropType } from 'react-native';
 import { Image, StyleSheet } from 'react-native';
-
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import { greeting } from '@atom/constants';
 import { useSession } from '@/contexts/Auth';
+
+import { greeting } from '@atom/constants';
 
 export default function HomeScreen() {
   const { signOut, session } = useSession();
@@ -15,7 +16,9 @@ export default function HomeScreen() {
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
       headerImage={
         <Image
-          source={require('@/assets/images/partial-react-logo.png')}
+          source={
+            require('@/assets/images/partial-react-logo.png') as ImageSourcePropType
+          }
           style={styles.reactLogo}
         />
       }
