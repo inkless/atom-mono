@@ -13,23 +13,27 @@ function HomeComponent() {
     }
   }, []);
 
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const injectedObj = JSON.parse(
-    window.ReactNativeWebView?.injectedObjectJson() || '{}',
+    window.ReactNativeWebView?.injectedObjectJson() ?? '{}',
   );
   return (
     <div className="p-2">
       <h3>Welcome Home!</h3>
       <h4>Cookie</h4>
       <pre>{cookie}</pre>
-      {injectedObj.supportBack && (
-        <button
-          onClick={() => {
-            window.ReactNativeWebView?.postMessage('Back');
-          }}
-        >
-          Back
-        </button>
-      )}
+      {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+        injectedObj.supportBack && (
+          <button
+            onClick={() => {
+              window.ReactNativeWebView?.postMessage('Back');
+            }}
+          >
+            Back
+          </button>
+        )
+      }
     </div>
   );
 }
