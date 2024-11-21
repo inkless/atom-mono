@@ -36,9 +36,6 @@ importers:
 
   .:
     devDependencies:
-      '@atom/prettier-config':
-        specifier: workspace:*
-        version: link:tools/prettier
       jest:
         specifier: 'catalog:'
         version: 29.7.0(@types/node@22.9.0)(ts-node@10.9.1(@types/node@22.9.0)(typescript@5.6.3))
@@ -239,28 +236,12 @@ importers:
         specifier: ^8.15.0
         version: 8.15.0(eslint@9.15.0)(typescript@5.6.3)
     devDependencies:
-      '@atom/prettier-config':
-        specifier: workspace:*
-        version: link:../prettier
       eslint:
         specifier: 'catalog:'
         version: 9.15.0
       prettier:
         specifier: 'catalog:'
         version: 3.3.3
-      typescript:
-        specifier: 'catalog:'
-        version: 5.6.3
-
-  tools/prettier:
-    dependencies:
-      '@ianvs/prettier-plugin-sort-imports':
-        specifier: ^4.4.0
-        version: 4.4.0(prettier@3.3.3)
-      prettier:
-        specifier: 'catalog:'
-        version: 3.3.3
-    devDependencies:
       typescript:
         specifier: 'catalog:'
         version: 5.6.3
@@ -1437,15 +1418,6 @@ packages:
   '@humanwhocodes/retry@0.4.1':
     resolution: {integrity: sha512-c7hNEllBlenFTHBky65mhq8WD2kbN9Q6gk0bTk8lSBvc554jpXSkST1iePudpt7+A/AQvuHs9EMqjHDXMY1lrA==}
     engines: {node: '>=18.18'}
-
-  '@ianvs/prettier-plugin-sort-imports@4.4.0':
-    resolution: {integrity: sha512-f4/e+/ANGk3tHuwRW0uh2YuBR50I4h1ZjGQ+5uD8sWfinHTivQsnieR5cz24t8M6Vx4rYvZ5v/IEKZhYpzQm9Q==}
-    peerDependencies:
-      '@vue/compiler-sfc': 2.7.x || 3.x
-      prettier: 2 || 3
-    peerDependenciesMeta:
-      '@vue/compiler-sfc':
-        optional: true
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -7494,17 +7466,6 @@ snapshots:
   '@humanwhocodes/retry@0.3.1': {}
 
   '@humanwhocodes/retry@0.4.1': {}
-
-  '@ianvs/prettier-plugin-sort-imports@4.4.0(prettier@3.3.3)':
-    dependencies:
-      '@babel/generator': 7.26.2
-      '@babel/parser': 7.26.2
-      '@babel/traverse': 7.25.9
-      '@babel/types': 7.26.0
-      prettier: 3.3.3
-      semver: 7.6.3
-    transitivePeerDependencies:
-      - supports-color
 
   '@isaacs/cliui@8.0.2':
     dependencies:

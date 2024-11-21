@@ -21,7 +21,6 @@
     "typescript-eslint": "^8.15.0"
   },
   "devDependencies": {
-    "@atom/prettier-config": "workspace:*",
     "eslint": "catalog:",
     "prettier": "catalog:",
     "typescript": "catalog:"
