@@ -1,4 +1,4 @@
-appId: com.atom.app.preview
+appId: com.atom.app.dev
 ---
 - launchApp
 - runFlow:
