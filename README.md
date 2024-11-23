@@ -1,6 +1,6 @@
 # Welcome to Atom mono 👋
 
-This is monorepo for Expo project using pnpm + turborepo.
+This is a monorepo for Expo project using pnpm + turborepo.
 
 ## Prerequisite
 

@@ -37,7 +37,7 @@ export default tseslint.config(
         'error',
         { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
       ],
-      "@typescript-eslint/no-misused-promises": [
+      '@typescript-eslint/no-misused-promises': [
         'error',
         { checksVoidReturn: { attributes: false } },
       ],
@@ -45,8 +45,8 @@ export default tseslint.config(
         'warn',
         { prefer: 'type-imports', fixStyle: 'separate-type-imports' },
       ],
-      "@typescript-eslint/no-unnecessary-condition": [
-        "error",
+      '@typescript-eslint/no-unnecessary-condition': [
+        'error',
         {
           allowConstantLoopConditions: true,
         },
