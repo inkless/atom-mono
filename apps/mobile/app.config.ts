@@ -70,7 +70,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   },
   extra: {
     eas: {
-      projectId: '96db68ea-4718-4293-b16b-65b5bd2afffa',
+      projectId: '84e70851-d6e6-4e05-8586-e3d9adc55615',
     },
   },
   owner: 'inkless',
