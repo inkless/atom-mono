@@ -9,6 +9,31 @@ npm i -g pnpm
 npm i -g turbo
 ```
 
+### iOS Setup
+- Download XCode from AppStore
+- Link Cocoapods
+```
+brew install cocoapods
+# Below is optional if you ran into error above
+brew link --overwrite cocoapods 
+```
+
+### Android Setup
+- Download JDK Zulu
+```
+brew install --cask zulu@17
+```
+- Setup JAVA_HOME
+```
+# I just comment out my current one
+ export JAVA_HOME=/Users/eileen.yau/Library/Java/JavaVirtualMachines/semeru-21.0.3/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+```
+
+- Optional Android Studio
+Swap Gradle JDK with zulu-17 in `Execution, Deployment > Build Tools > Gradle`
+
+
 ## Get started
 
 1. Install dependencies
