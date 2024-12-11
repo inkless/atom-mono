@@ -9,6 +9,10 @@
       "distribution": "internal",
       "env": {
         "APP_VARIANT": "development"
+      },
+      "android": {
+        "distribution": "internal",
+        "withoutCredentials": true
       }
     },
     "preview": {
