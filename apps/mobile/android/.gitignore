@@ -4,6 +4,7 @@
 
 # Android/IntelliJ
 #
+release/
 build/
 .idea
 .gradle
