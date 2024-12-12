@@ -1,0 +1,14 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "84e70851-d6e6-4e05-8586-e3d9adc55615"
+      }
+    },
+    "owner": "atom-ux",
+    "slug": "atom",
+    "android": {
+      "package": "com.atomux.atom"
+    }
+  }
+}

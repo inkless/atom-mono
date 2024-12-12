@@ -35,6 +35,10 @@ catalogs:
 importers:
 
   .:
+    dependencies:
+      '@types/jest':
+        specifier: 29.5.14
+        version: 29.5.14
     devDependencies:
       jest:
         specifier: 'catalog:'
