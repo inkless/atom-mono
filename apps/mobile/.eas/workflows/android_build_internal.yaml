@@ -1,12 +1,12 @@
-# name: Build Android Internal App
+name: Build Android Internal App
 
-# on:
-#   push:
-#     branches: ['*']
+on:
+  push:
+    branches: ['*']
 
-# jobs:
-#   build:
-#     type: build
-#     params:
-#       platform: android
-#       profile: development
+jobs:
+  build:
+    type: build
+    params:
+      platform: android
+      profile: development
