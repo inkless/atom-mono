@@ -24,7 +24,7 @@ export default [
     return HttpResponse.json(tasks);
   }),
   http.post('/tasks', async ({ request }) => {
-    const task = await request.json();
+    const task = (await request.json()) as { title: string };
     const newTask = {
       id: uuidv4(),
       title: task.title,
