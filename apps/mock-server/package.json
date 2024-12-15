@@ -11,6 +11,7 @@
 		"type-check": "tsc"
 	},
 	"devDependencies": {
+		"@atom/eslint-config": "workspace:^",
 		"tsx": "^4.19.2"
 	},
 	"dependencies": {
