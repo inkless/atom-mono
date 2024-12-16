@@ -1,4 +1,4 @@
-appId: com.atom.app.dev
+appId: com.atomux.app.dev
 ---
 - launchApp
 - runFlow:
