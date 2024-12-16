@@ -5,14 +5,14 @@ const IS_PREVIEW = process.env.APP_VARIANT === 'preview';
 
 const getUniqueIdentifier = () => {
   if (IS_DEV) {
-    return 'com.atom.app.dev';
+    return 'com.atomux.app.dev';
   }
 
   if (IS_PREVIEW) {
-    return 'com.atom.app.preview';
+    return 'com.atomux.app.preview';
   }
 
-  return 'com.atom.app';
+  return 'com.atomux.app';
 };
 
 const getAppName = () => {
