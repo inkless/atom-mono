@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 import { router, useLocalSearchParams } from 'expo-router';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
@@ -26,7 +26,9 @@ export default function SignIn() {
       >
         Sign In
       </ThemedText>
-      <ThemedText onPress={browserSignIn}>Sign In with Browser</ThemedText>
+      {Platform.OS !== 'web' && (
+        <ThemedText onPress={browserSignIn}>Sign In with Browser</ThemedText>
+      )}
     </ThemedView>
   );
 }
