@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { createFileRoute } from '@tanstack/react-router';
+import { Button } from '@atom/ui-components';
 
 export const Route = createFileRoute('/_portal/')({
   component: HomeComponent,
@@ -34,6 +35,7 @@ function HomeComponent() {
           </button>
         )
       }
+      <Button label="RN Button" onPress={() => alert('clicked')} />
     </div>
   );
 }

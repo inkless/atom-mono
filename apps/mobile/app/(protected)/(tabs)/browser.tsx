@@ -1,4 +1,4 @@
-import { StyleSheet, Pressable } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
@@ -6,6 +6,7 @@ import { ThemedView } from '@/components/ThemedView';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 import { getBaseUrl } from '@/utils/baseUrl';
 import { openBrowserAsync } from 'expo-web-browser';
+import { Button } from '@atom/ui-components';
 
 export default function BrowserScreen() {
   const openBrowserCheckout = async () => {
@@ -28,17 +29,7 @@ export default function BrowserScreen() {
         <ThemedText type="title">Browser</ThemedText>
       </ThemedView>
       <ThemedView>
-        <Pressable
-          style={{
-            backgroundColor: '#20b029',
-            width: 200,
-            paddingVertical: 10,
-            alignItems: 'center',
-          }}
-          onPress={openBrowserCheckout}
-        >
-          <ThemedText>Open Checkout</ThemedText>
-        </Pressable>
+        <Button onPress={openBrowserCheckout} label="Open Checkout" />
       </ThemedView>
     </ParallaxScrollView>
   );

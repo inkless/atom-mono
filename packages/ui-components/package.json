@@ -1,0 +1,17 @@
+{
+  "name": "@atom/ui-components",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "license": "MIT",
+  "dependencies": {
+    "react": "catalog:react18",
+    "react-dom": "catalog:react18",
+    "react-native-web": "~0.19.13"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "@types/react": "catalog:react18",
+    "@types/react-dom": "catalog:react18",
+    "typescript": "catalog:"
+  }
+}

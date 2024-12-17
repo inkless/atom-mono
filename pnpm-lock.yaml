@@ -25,6 +25,9 @@ catalogs:
     '@types/react':
       specifier: ^18.3.11
       version: 18.3.12
+    '@types/react-dom':
+      specifier: ^18.3.1
+      version: 18.3.1
     react:
       specifier: 18.3.1
       version: 18.3.1
@@ -54,6 +57,9 @@ importers:
       '@atom/constants':
         specifier: workspace:*
         version: link:../../packages/constants
+      '@atom/ui-components':
+        specifier: workspace:^
+        version: link:../../packages/ui-components
       '@expo/vector-icons':
         specifier: ^14.0.2
         version: 14.0.4
@@ -185,6 +191,9 @@ importers:
 
   apps/web:
     dependencies:
+      '@atom/ui-components':
+        specifier: workspace:^
+        version: link:../../packages/ui-components
       '@tanstack/react-router':
         specifier: ^1.81.14
         version: 1.81.14(@tanstack/router-generator@1.81.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -208,10 +217,10 @@ importers:
         specifier: ^22.9.0
         version: 22.9.0
       '@types/react':
-        specifier: ^18.3.12
+        specifier: catalog:react18
         version: 18.3.12
       '@types/react-dom':
-        specifier: ^18.3.1
+        specifier: catalog:react18
         version: 18.3.1
       '@vitejs/plugin-react':
         specifier: ^4.3.3
@@ -230,6 +239,31 @@ importers:
         version: 5.4.11(@types/node@22.9.0)(lightningcss@1.27.0)(terser@5.36.0)
 
   packages/constants: {}
+
+  packages/ui-components:
+    dependencies:
+      react:
+        specifier: catalog:react18
+        version: 18.3.1
+      react-dom:
+        specifier: catalog:react18
+        version: 18.3.1(react@18.3.1)
+      react-native-web:
+        specifier: ~0.19.13
+        version: 0.19.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+    devDependencies:
+      '@types/node':
+        specifier: ^22.9.0
+        version: 22.9.0
+      '@types/react':
+        specifier: catalog:react18
+        version: 18.3.12
+      '@types/react-dom':
+        specifier: catalog:react18
+        version: 18.3.1
+      typescript:
+        specifier: 'catalog:'
+        version: 5.6.3
 
   tools/eslint:
     dependencies:

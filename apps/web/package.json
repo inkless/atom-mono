@@ -10,18 +10,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@atom/ui-components": "workspace:^",
     "@tanstack/react-router": "^1.81.14",
     "@tanstack/router-devtools": "^1.82.0",
     "react": "catalog:react18",
     "react-dom": "catalog:react18"
   },
   "devDependencies": {
+    "@atom/eslint-config": "workspace:*",
     "@tanstack/router-plugin": "^1.81.9",
     "@types/node": "^22.9.0",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
+    "@types/react": "catalog:react18",
+    "@types/react-dom": "catalog:react18",
     "@vitejs/plugin-react": "^4.3.3",
-    "@atom/eslint-config": "workspace:*",
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.11.0",
     "typescript": "catalog:",
