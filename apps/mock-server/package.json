@@ -1,22 +1,22 @@
 {
-	"name": "mock-server",
-	"exports": {
-		"./server": "./src/server.ts",
-		"./react-native-server": "./src/react-native-server.ts"
-	},
-	"scripts": {
-		"dev": "tsx watch src/index.ts",
-		"build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js --external:express",
-		"start": "node dist/index.js",
-		"type-check": "tsc"
-	},
-	"devDependencies": {
-		"@atom/eslint-config": "workspace:^",
-		"tsx": "^4.19.2"
-	},
-	"dependencies": {
-		"@mswjs/http-middleware": "^0.10.2",
-		"msw": "^2.6.8",
-		"uuid": "^11.0.3"
-	}
+  "name": "mock-server",
+  "exports": {
+    "./server": "./src/server.ts",
+    "./react-native-server": "./src/react-native-server.ts"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js --external:express",
+    "start": "node dist/index.js",
+    "type-check": "tsc"
+  },
+  "devDependencies": {
+    "@atom/eslint-config": "workspace:^",
+    "tsx": "^4.19.2"
+  },
+  "dependencies": {
+    "@mswjs/http-middleware": "^0.10.2",
+    "msw": "^2.6.8",
+    "uuid": "^11.0.3"
+  }
 }
