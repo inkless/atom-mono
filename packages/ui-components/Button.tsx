@@ -1,4 +1,4 @@
-import { Pressable, Text } from 'react-native';
+import { Platform, Pressable, Text } from 'react-native';
 
 type Props = {
   onPress?: () => void;
@@ -6,6 +6,13 @@ type Props = {
 };
 
 export function Button({ onPress, label }: Props) {
+  let buttonPostfix = ' in Web';
+
+  // this will be treeshaked in Web
+  if (Platform.OS !== 'web') {
+    buttonPostfix = '';
+  }
+
   return (
     <Pressable
       style={{
@@ -16,7 +23,10 @@ export function Button({ onPress, label }: Props) {
       }}
       onPress={onPress}
     >
-      <Text>{label}</Text>
+      <Text>
+        {label}
+        {buttonPostfix}
+      </Text>
     </Pressable>
   );
 }
