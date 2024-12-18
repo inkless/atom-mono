@@ -16,6 +16,7 @@
       "env": {
         "APP_VARIANT": "preview",
         "EXPO_PUBLIC_WEB_URL": "https://atom-web-phi.vercel.app"
+        "EXPO_PUBLIC_API_URL": "https://atom-web-phi.vercel.app/api"
       },
       "android": {
         "distribution": "internal",
@@ -27,6 +28,7 @@
       "autoIncrement": true,
       "env": {
         "EXPO_PUBLIC_WEB_URL": "https://atom-web-phi.vercel.app"
+        "EXPO_PUBLIC_API_URL": "https://atom-web-phi.vercel.app/api"
       }
     },
     "ios-simulator": {

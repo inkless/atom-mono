@@ -1,11 +1,11 @@
 import { WebView } from 'react-native-webview';
 import { router, Stack } from 'expo-router';
 import { Pressable, StyleSheet } from 'react-native';
-import { getBaseUrl } from '@/utils/baseUrl';
+import { getWebUrl } from '@/utils/baseUrl';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 
 export default function OnboardScreen() {
-  const uri = `${getBaseUrl()}/onboard`;
+  const uri = `${getWebUrl()}/onboard`;
   return (
     <>
       <Stack.Screen

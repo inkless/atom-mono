@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@eslint/compat": "^1.2.3",
+    "@tanstack/eslint-plugin-query": "^5.62.1",
     "eslint": "catalog:",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",

@@ -4,13 +4,13 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { IconSymbol } from '@/components/ui/IconSymbol';
-import { getBaseUrl } from '@/utils/baseUrl';
+import { getWebUrl } from '@/utils/baseUrl';
 import { openBrowserAsync } from 'expo-web-browser';
 import { Button } from '@atom/ui-components';
 
 export default function BrowserScreen() {
   const openBrowserCheckout = async () => {
-    const checkoutUrl = `${getBaseUrl()}/checkout`;
+    const checkoutUrl = `${getWebUrl()}/checkout`;
     await openBrowserAsync(checkoutUrl);
   };
   return (

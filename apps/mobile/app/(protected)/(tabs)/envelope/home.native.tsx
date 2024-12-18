@@ -4,11 +4,11 @@ import { Platform, StyleSheet } from 'react-native';
 import { WebView } from 'react-native-webview';
 import { Stack } from 'expo-router';
 import { useSession } from '@/contexts/Auth';
-import { getBaseUrl } from '@/utils/baseUrl';
+import { getWebUrl } from '@/utils/baseUrl';
 import CookieManager from '@react-native-cookies/cookies';
 
 export default function EnvelopeHome() {
-  const uri = `${getBaseUrl()}/`;
+  const uri = `${getWebUrl()}/`;
   const { session } = useSession();
 
   useEffect(() => {
@@ -17,7 +17,7 @@ export default function EnvelopeHome() {
       // custom native module instead to set cookies
       // Or maybe we should send Pull Request to react-native-webview to add
       // this functionality
-      CookieManager.set(getBaseUrl(), {
+      CookieManager.set(getWebUrl(), {
         name: 'session',
         value: session ?? '',
       }).catch(() => {

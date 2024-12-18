@@ -2,46 +2,40 @@ import { StyleSheet } from 'react-native';
 import { useLocalSearchParams } from 'expo-router/build/hooks';
 import { Collapsible } from '@/components/Collapsible';
 import { ExternalLink } from '@/components/ExternalLink';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import { IconSymbol } from '@/components/ui/IconSymbol';
+import { UserProfile } from '@/features/tasks/UserProfile';
+import { Tasks } from '@/features/tasks/Tasks';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function ServerScreen() {
   const { id } = useLocalSearchParams();
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
-      headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="chevron.left.forwardslash.chevron.right"
-          style={styles.headerImage}
-        />
-      }
-    >
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Server</ThemedText>
+    <SafeAreaView>
+      <ThemedView>
+        <ThemedView style={styles.titleContainer}>
+          <ThemedText type="title">Server</ThemedText>
+        </ThemedView>
+        <ThemedView>
+          <ThemedText>Server Route with ID: {id}</ThemedText>
+          <ExternalLink href="https://docs.expo.dev/router/introduction">
+            <ThemedText type="link">Learn more</ThemedText>
+          </ExternalLink>
+        </ThemedView>
       </ThemedView>
-      <ThemedText>Server Route with ID: {id}</ThemedText>
-      <Collapsible title="API 1">
-        <ThemedText>API 1 tests</ThemedText>
-        <ExternalLink href="https://docs.expo.dev/router/introduction">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
+      <Collapsible title="UserProfile">
+        <UserProfile />
       </Collapsible>
-    </ParallaxScrollView>
+
+      <ThemedView style={{ paddingTop: 16 }}>
+        <ThemedText type="title">Tasks</ThemedText>
+      </ThemedView>
+      <Tasks />
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  headerImage: {
-    color: '#808080',
-    bottom: -90,
-    left: -35,
-    position: 'absolute',
-  },
   titleContainer: {
     flexDirection: 'row',
     gap: 8,

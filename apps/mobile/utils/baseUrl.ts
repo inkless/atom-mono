@@ -1,17 +1,9 @@
 import Constants from 'expo-constants';
 import { Platform } from 'react-native';
 
-/**
- * Extend this function when going to production by
- * setting the baseUrl to your production API URL.
- */
-export const getBaseUrl = () => {
-  if (process.env.EXPO_PUBLIC_WEB_URL) {
-    return process.env.EXPO_PUBLIC_WEB_URL;
-  }
-
+const getHostUri = () => {
   if (Platform.OS === 'web') {
-    return `http://${location.hostname}:4000`;
+    return `http://${location.hostname}`;
   }
 
   /**
@@ -27,5 +19,25 @@ export const getBaseUrl = () => {
       'Failed to get localhost. Please use development client and run in local machine.',
     );
   }
-  return `http://${localhost}:4000`;
+  return `http://${localhost}`;
+};
+
+/**
+ * Extend this function when going to production by
+ * setting the baseUrl to your production API URL.
+ */
+export const getWebUrl = () => {
+  if (process.env.EXPO_PUBLIC_WEB_URL) {
+    return process.env.EXPO_PUBLIC_WEB_URL;
+  }
+
+  return `${getHostUri()}:4000`;
+};
+
+export const getApiUrl = () => {
+  if (process.env.EXPO_PUBLIC_API_URL) {
+    return process.env.EXPO_PUBLIC_API_URL;
+  }
+
+  return `${getHostUri()}:9090`;
 };

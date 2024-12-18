@@ -1,10 +1,10 @@
 import { WebView } from 'react-native-webview';
 import { router, Stack } from 'expo-router';
 import { StyleSheet } from 'react-native';
-import { getBaseUrl } from '@/utils/baseUrl';
+import { getWebUrl } from '@/utils/baseUrl';
 
 export default function ChangeScreen() {
-  const uri = `${getBaseUrl()}/`;
+  const uri = `${getWebUrl()}/`;
   return (
     <>
       <Stack.Screen

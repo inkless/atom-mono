@@ -9,6 +9,7 @@ import {
   DefaultTheme,
   ThemeProvider,
 } from '@react-navigation/native';
+import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 
 import 'react-native-reanimated';
 
@@ -24,6 +25,8 @@ export const unstable_settings = {
 SplashScreen.preventAutoHideAsync().catch(() => {
   // do nothing
 });
+
+const queryClient = new QueryClient();
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
@@ -45,10 +48,12 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <SessionProvider>
-        <Slot />
-      </SessionProvider>
-      <StatusBar style="auto" />
+      <QueryClientProvider client={queryClient}>
+        <SessionProvider>
+          <Slot />
+        </SessionProvider>
+        <StatusBar style="auto" />
+      </QueryClientProvider>
     </ThemeProvider>
   );
 }
