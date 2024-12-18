@@ -60,3 +60,6 @@ cache/
 .turbo
 
 .env
+
+# cache
+.cache

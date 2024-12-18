@@ -185,6 +185,9 @@ importers:
       '@atom/eslint-config':
         specifier: workspace:^
         version: link:../../tools/eslint
+      '@atom/tsconfig':
+        specifier: workspace:^
+        version: link:../../tools/tsconfig
       tsx:
         specifier: ^4.19.2
         version: 4.19.2
@@ -252,6 +255,9 @@ importers:
         specifier: ~0.19.13
         version: 0.19.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     devDependencies:
+      '@atom/tsconfig':
+        specifier: workspace:^
+        version: link:../../tools/tsconfig
       '@types/node':
         specifier: ^22.9.0
         version: 22.9.0
@@ -298,6 +304,8 @@ importers:
       typescript:
         specifier: 'catalog:'
         version: 5.6.3
+
+  tools/tsconfig: {}
 
 packages:
 

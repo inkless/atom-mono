@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@atom/eslint-config": "workspace:^",
+    "@atom/tsconfig": "workspace:^",
     "tsx": "^4.19.2"
   },
   "dependencies": {
