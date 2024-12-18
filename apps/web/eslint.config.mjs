@@ -1,15 +1,15 @@
-import globals from 'globals'
-import reactRefresh from 'eslint-plugin-react-refresh'
+import globals from 'globals';
+import reactRefresh from 'eslint-plugin-react-refresh';
 
-import baseConfig from '@atom/eslint-config/base';
+import typescriptConfig from '@atom/eslint-config/typescript';
 import reactConfig from '@atom/eslint-config/react';
 
 /** @type {import('typescript-eslint').Config} */
 export default [
   {
-    ignores: ['dist'] 
+    ignores: ['dist'],
   },
-  ...baseConfig,
+  ...typescriptConfig,
   ...reactConfig,
   {
     languageOptions: {

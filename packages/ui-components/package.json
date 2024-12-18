@@ -10,7 +10,6 @@
   },
   "devDependencies": {
     "@atom/tsconfig": "workspace:^",
-    "@types/node": "^22.9.0",
     "@types/react": "catalog:react18",
     "@types/react-dom": "catalog:react18",
     "typescript": "catalog:"

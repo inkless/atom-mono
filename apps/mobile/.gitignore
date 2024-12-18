@@ -40,3 +40,4 @@ app-example
 # native build
 ios/
 android/
+coverage/

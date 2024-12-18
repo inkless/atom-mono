@@ -1,4 +1,4 @@
-import baseConfig from '@atom/eslint-config/base';
+import typescriptConfig from '@atom/eslint-config/typescript';
 
 /** @type {import('typescript-eslint').Config} */
-export default [...baseConfig];
+export default [...typescriptConfig];
