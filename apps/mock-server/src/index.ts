@@ -1,8 +1,12 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import { createServer } from '@mswjs/http-middleware';
+import express from 'express';
+import { createMiddleware } from '@mswjs/http-middleware';
 import handlers from './handlers';
 
-const httpServer = createServer({}, ...handlers);
+const app = express();
+const port = 9090;
 
-// eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
-httpServer.listen(9090);
+app.use(createMiddleware(...handlers));
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});

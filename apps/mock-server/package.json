@@ -13,10 +13,12 @@
   "devDependencies": {
     "@atom/eslint-config": "workspace:^",
     "@atom/tsconfig": "workspace:^",
+    "@types/express": "^4.17.21",
     "tsx": "^4.19.2"
   },
   "dependencies": {
     "@mswjs/http-middleware": "^0.10.2",
+    "express": "^4.21.2",
     "msw": "^2.6.8",
     "uuid": "^11.0.3"
   }
