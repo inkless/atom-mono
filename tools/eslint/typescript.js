@@ -28,7 +28,7 @@ export default tseslint.config(
       'turbo/no-undeclared-env-vars': [
         'error',
         {
-          allowList: ['^EXPO_PUBLIC_.+$', 'EXPO_OS', 'NODE_ENV'],
+          allowList: ['^EXPO_PUBLIC_.+$', 'EXPO_OS', 'NODE_ENV', 'JEST_WORKER_ID'],
         },
       ],
       '@typescript-eslint/array-type': 'off',

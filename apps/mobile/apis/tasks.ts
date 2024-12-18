@@ -1,4 +1,4 @@
-import { API_URL } from './constants';
+import { getApiUrl } from '@/utils/baseUrl';
 
 interface Task {
   id: string;
@@ -8,8 +8,13 @@ interface Task {
 
 // TODO - POC code, need better API client
 export const getTasks = async () => {
-  const resp = await fetch(`${API_URL}/tasks`);
-  if (!resp.ok) {
+  let resp;
+  try {
+    resp = await fetch(`${getApiUrl()}/tasks`);
+  } catch (e) {
+    console.log(e, 'error');
+  }
+  if (!resp?.ok) {
     throw new Error('Failed to fetch');
   }
   return (await resp.json()) as Task[];

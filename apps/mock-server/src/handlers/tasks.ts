@@ -1,5 +1,6 @@
 import { http, HttpResponse } from 'msw';
 import { v4 as uuidv4 } from 'uuid';
+import { getApiUrl } from '../api';
 
 const tasks = [
   {
@@ -20,10 +21,10 @@ const tasks = [
 ];
 
 export default [
-  http.get('/tasks', () => {
+  http.get(getApiUrl('/tasks'), () => {
     return HttpResponse.json(tasks);
   }),
-  http.post('/tasks', async ({ request }) => {
+  http.post(getApiUrl('/tasks'), async ({ request }) => {
     const task = (await request.json()) as { title: string };
     const newTask = {
       id: uuidv4(),

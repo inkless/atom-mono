@@ -6,7 +6,8 @@
       "@/*": [
         "./*"
       ]
-    }
+    },
+    "moduleResolution": "Bundler"
   },
   "include": [
     "**/*.ts",
