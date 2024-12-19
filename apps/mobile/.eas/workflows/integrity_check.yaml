@@ -19,6 +19,8 @@ jobs:
     steps:
       - name: upgrade pnpm
         run: npm i -g pnpm
+      - name: eslint install
+        run: npm i -g eslint@latest
       - uses: eas/checkout
       - uses: eas/install_node_modules
       - name: eslint version
