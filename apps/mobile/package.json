@@ -11,7 +11,7 @@
     "test": "jest",
     "test:watch": "jest --watchAll",
     "test:coverage": "jest --collectCoverage",
-    "lint": "expo lint",
+    "lint": "eslint .",
     "maestro": "maestro test maestro/flow.yaml"
   },
   "dependencies": {
