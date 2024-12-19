@@ -21,5 +21,7 @@ jobs:
         run: npm i -g pnpm
       - uses: eas/checkout
       - uses: eas/install_node_modules
+      - name: eslint version
+        run: npx eslint --version
       - name: Run lint
         run: pnpm lint
