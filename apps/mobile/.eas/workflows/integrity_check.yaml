@@ -1,0 +1,13 @@
+name: Integrity Check
+
+on:
+  push:
+    branches: ['*']
+
+jobs:
+  Test:
+    steps:
+      - run: turbo test
+  Lint:
+    steps:
+      - run: turbo lint
