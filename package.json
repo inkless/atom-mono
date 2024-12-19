@@ -10,7 +10,7 @@
     "jest": "catalog:",
     "prettier": "catalog:",
     "ts-node": "^10.9.2",
-    "turbo": "^2.3.0",
+    "turbo": "^2.3.3",
     "typescript": "catalog:"
   }
 }
