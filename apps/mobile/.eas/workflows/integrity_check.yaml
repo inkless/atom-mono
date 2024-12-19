@@ -7,7 +7,7 @@ on:
 jobs:
   Test:
     steps:
-      - run: turbo test
+      - run: pnpm turbo test
   Lint:
     steps:
-      - run: turbo lint
+      - run: pnpm turbo lint
