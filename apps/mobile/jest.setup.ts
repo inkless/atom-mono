@@ -1,5 +1,3 @@
-/* eslint-disable no-undef */
-
 import '@testing-library/react-native/extend-expect';
 import { server } from '@atom/mock-server/server';
 
