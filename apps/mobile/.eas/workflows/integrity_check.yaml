@@ -23,5 +23,7 @@ jobs:
       - uses: eas/install_node_modules
       - name: eslint version
         run: npx eslint --version
-      - name: Run lint
+      - name: Run lint 1
+        run: pnpm eslint .
+      - name: Run lint 2
         run: pnpm lint
