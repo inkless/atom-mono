@@ -12,7 +12,9 @@ jobs:
         run: npm i -g pnpm
       - uses: eas/checkout
       - uses: eas/install_node_modules
+        working-directory: .
       - name: Run lint
         run: pnpm lint
+        working-directory: .
       - name: Run test
         run: pnpm test
