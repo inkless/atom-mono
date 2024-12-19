@@ -2,8 +2,8 @@
   "name": "atom-mono",
   "private": true,
   "engines": {
-    "node": ">=20.10.0",
-    "pnpm": "^9.3.0"
+    "node": ">=18",
+    "pnpm": ">=8.7.0"
   },
   "packageManager": "pnpm@9.13.1",
   "devDependencies": {
