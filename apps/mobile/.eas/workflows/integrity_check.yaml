@@ -8,6 +8,8 @@ jobs:
   Test:
     type: custom
     steps:
+      - name: upgrade pnpm
+        run: pnpm i -g pnpm
       - uses: eas/checkout
       - uses: eas/install_node_modules
       - name: echo pwd
@@ -19,6 +21,8 @@ jobs:
   Lint:
     type: custom
     steps:
+      - name: upgrade pnpm
+        run: pnpm i -g pnpm
       - uses: eas/checkout
       - uses: eas/install_node_modules
       - name: Run lint
