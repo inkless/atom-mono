@@ -11,25 +11,15 @@ jobs:
       - name: upgrade pnpm
         run: npm i -g pnpm
       - uses: eas/checkout
-      - name: Go to root
-        run: cd ../..
-      - name: pwd
-        run: pwd
       - uses: eas/install_node_modules
       - name: Run test
-        run: pnpm turbo test
+        run: pnpm test
   Lint:
     type: custom
     steps:
       - name: upgrade pnpm
         run: npm i -g pnpm
       - uses: eas/checkout
-      - name: Ls
-        run: ls -al
-      - name: Go to root
-        run: cd ../..
-      - name: pwd
-        run: pwd
       - uses: eas/install_node_modules
       - name: Run lint
-        run: pnpm turbo lint
+        run: pnpm lint
