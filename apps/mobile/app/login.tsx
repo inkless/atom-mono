@@ -1,11 +1,10 @@
 import { View, Text, Platform, StyleSheet } from 'react-native';
 import { router, useLocalSearchParams } from 'expo-router';
+import { getTheme } from '@atom/expo-settings';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { useSession } from '@/contexts/Auth';
 import { useBrowserSignIn } from '@/hooks/useBrowserSignIn';
-import { getTheme } from '@atom/expo-settings';
-
 
 export default function SignIn() {
   const { signIn } = useSession();
@@ -33,7 +32,7 @@ export default function SignIn() {
       )}
       <View style={{ alignItems: 'center', justifyContent: 'center' }}>
         <Text>Theme: {getTheme()}</Text>
-    </View>
+      </View>
     </ThemedView>
   );
 }

@@ -30,10 +30,10 @@
   "homepage": "https://github.com/EllySmore/expo-settings#readme",
   "dependencies": {},
   "devDependencies": {
-    "@types/react": "~18.3.12",
+    "@types/react": "catalog:react18",
     "expo-module-scripts": "^4.0.2",
-    "expo": "~52.0.0",
-    "react-native": "0.76.0"
+    "expo": "~52.0.10",
+    "react-native": "0.76.2"
   },
   "peerDependencies": {
     "expo": "*",
