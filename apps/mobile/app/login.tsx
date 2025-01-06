@@ -1,5 +1,6 @@
-import { Platform, StyleSheet } from 'react-native';
+import { View, Text, Platform, StyleSheet } from 'react-native';
 import { router, useLocalSearchParams } from 'expo-router';
+import { getTheme } from '@atom/expo-settings';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { useSession } from '@/contexts/Auth';
@@ -29,6 +30,9 @@ export default function SignIn() {
       {Platform.OS !== 'web' && (
         <ThemedText onPress={browserSignIn}>Sign In with Browser</ThemedText>
       )}
+      <View style={{ alignItems: 'center', justifyContent: 'center' }}>
+        <Text>Theme: {getTheme()}</Text>
+      </View>
     </ThemedView>
   );
 }

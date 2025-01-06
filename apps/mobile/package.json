@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@atom/constants": "workspace:*",
+    "@atom/expo-settings": "workspace:^",
     "@atom/ui-components": "workspace:^",
     "@expo/vector-icons": "^14.0.2",
     "@react-native-cookies/cookies": "^6.2.1",
