@@ -21,13 +21,13 @@
     "expo-settings",
     "ExpoSettings"
   ],
-  "repository": "https://github.com/EllySmore/expo-settings",
+  "repository": "https://github.com/affirm/ux",
   "bugs": {
-    "url": "https://github.com/EllySmore/expo-settings/issues"
+    "url": "https://github.com/affirm/ux/issues"
   },
   "author": "Eileen Yau <eileen.yau@affirm.com> (https://github.com/EllySmore)",
   "license": "MIT",
-  "homepage": "https://github.com/EllySmore/expo-settings#readme",
+  "homepage": "https://github.com/affirm/ux/expo-settings#readme",
   "dependencies": {},
   "devDependencies": {
     "@types/react": "catalog:react18",
