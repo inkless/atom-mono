@@ -9,7 +9,7 @@ jobs:
     type: build
     params:
       platform: ios
-      profile: preview
+      profile: ios-simulator-preview
   end-to-end-test:
     needs: [build]
     type: maestro
