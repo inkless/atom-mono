@@ -11,7 +11,7 @@ jobs:
   #     platform: ios
   #     profile: ios-simulator-preview
   end-to-end-test:
-    needs: [build]
+    # needs: [build]
     type: maestro
     params:
       build_id: '4bccd8d6-54eb-4e8a-b8e8-bd634f745ab1' #${{ needs.build.outputs.build_id }}
