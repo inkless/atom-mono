@@ -4,14 +4,17 @@ on:
   push:
     branches: ['*']
 
-build:
-  name: Build Android app
-  steps:
-    - eas/checkout
-    - eas/install_node_modules
-    - eas/prebuild
-    - eas/configure_eas_update
-    - eas/inject_android_credentials
-    - eas/run_gradle:
-        inputs:
-          command: :app:test
+jobs:
+  build:
+    name: Build Android app
+    steps:
+      - name: upgrade pnpm
+        run: npm i -g pnpm
+      - uses: eas/checkout
+      - uses: eas/install_node_modules
+      - eas/prebuild
+      - eas/configure_eas_update
+      - eas/inject_android_credentials
+      - eas/run_gradle:
+          inputs:
+            command: :app:test
