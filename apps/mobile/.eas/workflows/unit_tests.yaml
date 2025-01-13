@@ -1,0 +1,26 @@
+name: Run Unit Tests
+
+on:
+  push:
+    branches: ['*']
+
+# noop
+
+jobs:
+  custom-job:
+    type: custom
+    steps:
+      - uses: eas/checkout
+
+      - uses: eas/install_node_modules
+
+      - name: Say hello!
+        run: echo "Hello world!"
+
+      - name: Multiline script
+        run: |
+              echo "--- Installing turbo"
+              npm install -g turbo
+
+              echo "--- Run test"
+              turbo build test
