@@ -13,6 +13,6 @@ jobs:
       - uses: eas/checkout
       - uses: eas/install_node_modules
       - uses: eas/prebuild
-      - uses: eas/run_gradle
+      - eas/run_gradle
           inputs:
-            command: :app:tests
+            command: :app:bundleRelease
