@@ -14,4 +14,4 @@ build:
       - uses: eas/prebuild
       - uses: eas/run_gradle
           inputs:
-            command: :app:tests
+            command: :app:lint
