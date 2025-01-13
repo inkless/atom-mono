@@ -17,9 +17,16 @@ jobs:
 
       - name: Multiline script
         run: |
-              echo "--- Installing turbo"
+              echo "--- Installing pnpm"
               pnpm i -g pnpm
+
+              echo "--- Setup pnpm"
+              pnpm setup
+
+              echo "--- Setup turbo"
               npm install -g turbo
+
+              echo "--- pnpm install"
               pnpm i 
               
               echo "--- Run test"
