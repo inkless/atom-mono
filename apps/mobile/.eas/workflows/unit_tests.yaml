@@ -4,24 +4,16 @@ on:
   push:
     branches: ['*']
 
-# noop
-
 jobs:
-  custom-job:
+  Native Unit Test:
     type: custom
     steps:
+      - name: upgrade pnpm
+        run: npm i -g pnpm
       - uses: eas/checkout
-
-      - name: Say hello!
-        run: echo "Hello world!"
-
-      - name: Multiline script
-        run: |
-              echo "--- Setup turbo"
-              npm install -g turbo
-
-              echo "--- pnpm install"
-              pnpm i 
-              
-              echo "--- Run test"
-              turbo build test
+      - uses: eas/install_node_modules
+      - uses: eas/prebuild
+      - uses: eas/run_gradle
+          inputs:
+            command: :app:tests
+          working_directory: /apps/mobile/android
