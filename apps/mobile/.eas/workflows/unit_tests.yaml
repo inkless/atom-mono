@@ -16,4 +16,3 @@ jobs:
       - uses: eas/run_gradle
           inputs:
             command: :app:tests
-          working_directory: /apps/mobile/android
