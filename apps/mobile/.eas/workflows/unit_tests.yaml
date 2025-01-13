@@ -16,5 +16,5 @@ jobs:
       - uses: eas/configure_eas_update
       - uses: eas/inject_android_credentials
       - uses: eas/run_gradle
-          inputs:
+          with:
             command: :app:test
