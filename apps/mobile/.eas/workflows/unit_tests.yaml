@@ -12,9 +12,9 @@ jobs:
         run: npm i -g pnpm
       - uses: eas/checkout
       - uses: eas/install_node_modules
-      - eas/prebuild
-      - eas/configure_eas_update
-      - eas/inject_android_credentials
-      - eas/run_gradle:
+      - uses: eas/prebuild
+      - uses: eas/configure_eas_update
+      - uses: eas/inject_android_credentials
+      - uses: eas/run_gradle
           inputs:
             command: :app:test
