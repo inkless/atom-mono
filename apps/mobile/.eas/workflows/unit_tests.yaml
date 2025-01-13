@@ -4,15 +4,14 @@ on:
   push:
     branches: ['*']
 
-jobs:
-  Native Unit Test:
-    type: custom
-    steps:
+build:
+  name: Build Android app
+  steps:
       - name: upgrade pnpm
         run: npm i -g pnpm
       - uses: eas/checkout
       - uses: eas/install_node_modules
       - uses: eas/prebuild
-      - eas/run_gradle
+      - uses: eas/run_gradle
           inputs:
-            command: :app:bundleRelease
+            command: :app:tests
