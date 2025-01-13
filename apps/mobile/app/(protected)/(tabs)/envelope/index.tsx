@@ -1,4 +1,4 @@
-import { StyleSheet, Text } from 'react-native';
+import { Pressable, StyleSheet } from 'react-native';
 import { Link } from 'expo-router';
 
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -23,9 +23,9 @@ export default function EnvelopeScreen() {
         <ThemedText type="title">Envelope</ThemedText>
       </ThemedView>
       <ThemedView>
-        <Text style={styles.link}>
-          Envelope Home with Cookie Share
-        </Text>
+        <Link style={styles.link} href="/envelope/home" asChild>
+          <Pressable> Envelope Home with Cookie Share</Pressable>
+        </Link>
       </ThemedView>
       <ThemedView>
         <Link style={styles.link} href="/envelope/about">
