@@ -11,6 +11,17 @@
         "APP_VARIANT": "development"
       }
     },
+    "build-and-maestro-test": {
+      "withoutCredentials": true,
+      "config": "build-and-maestro-test.yml",
+      "ios": {
+        "simulator": true,
+        "image": "latest"
+      },
+      "env": {
+        "APP_VARIANT": "preview"
+      }
+    },
     "preview": {
       "distribution": "internal",
       "env": {
