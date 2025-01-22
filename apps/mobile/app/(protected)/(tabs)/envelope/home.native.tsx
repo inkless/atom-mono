@@ -5,7 +5,6 @@ import { WebView } from 'react-native-webview';
 import { Stack } from 'expo-router';
 import { useSession } from '@/contexts/Auth';
 import { getWebUrl } from '@/utils/baseUrl';
-import CookieManager from '@react-native-cookies/cookies';
 
 export default function EnvelopeHome() {
   const uri = `${getWebUrl()}/`;
@@ -17,12 +16,12 @@ export default function EnvelopeHome() {
       // custom native module instead to set cookies
       // Or maybe we should send Pull Request to react-native-webview to add
       // this functionality
-      CookieManager.set(getWebUrl(), {
-        name: 'session',
-        value: session ?? '',
-      }).catch(() => {
-        // do something
-      });
+      // CookieManager.set(getWebUrl(), {
+      //   name: 'session',
+      //   value: session ?? '',
+      // }).catch(() => {
+      //   // do something
+      // });
     }
   }, [session]);
 
@@ -46,7 +45,6 @@ export default function EnvelopeHome() {
         // https://github.com/react-native-webview/react-native-webview/issues/1609
         // injectedJavaScript is reliable but it's always after page load.
         // injectedJavaScriptBeforeContentLoaded={`document.cookie="session=${session}"`}
-        sharedCookiesEnabled={true}
       />
     </>
   );
