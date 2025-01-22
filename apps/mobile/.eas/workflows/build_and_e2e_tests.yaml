@@ -6,8 +6,6 @@ on:
       # - '*'
       # apply to main only for now
       - 'main'
-  pull_requests:
-    branches:
       - 'e2e/**'
 
 jobs:
