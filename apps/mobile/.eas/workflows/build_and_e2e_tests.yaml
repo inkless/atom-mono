@@ -16,4 +16,3 @@ jobs:
     params:
       build_id: ${{ needs.build.outputs.build_id }}
       flow_path: ['./maestro/flow.yaml']
-

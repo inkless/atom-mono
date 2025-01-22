@@ -1,29 +1,10 @@
-import { useEffect } from 'react';
-// import Constants from 'expo-constants';
-import { Platform, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { WebView } from 'react-native-webview';
 import { Stack } from 'expo-router';
-import { useSession } from '@/contexts/Auth';
 import { getWebUrl } from '@/utils/baseUrl';
 
 export default function EnvelopeHome() {
   const uri = `${getWebUrl()}/`;
-  const { session } = useSession();
-
-  useEffect(() => {
-    if (Platform.OS !== 'web') {
-      // Note, this is not very elegant, it kinda works, we may consider build a
-      // custom native module instead to set cookies
-      // Or maybe we should send Pull Request to react-native-webview to add
-      // this functionality
-      // CookieManager.set(getWebUrl(), {
-      //   name: 'session',
-      //   value: session ?? '',
-      // }).catch(() => {
-      //   // do something
-      // });
-    }
-  }, [session]);
 
   return (
     <>

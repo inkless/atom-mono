@@ -12,5 +12,15 @@
     "ts-node": "^10.9.2",
     "turbo": "^2.3.3",
     "typescript": "catalog:"
+  },
+  "version": "1.0.0",
+  "scripts": {
+    "android": "expo run:android",
+    "ios": "expo run:ios"
+  },
+  "dependencies": {
+    "expo": "~52.0.27",
+    "react": "18.3.1",
+    "react-native": "0.76.6"
   }
 }
