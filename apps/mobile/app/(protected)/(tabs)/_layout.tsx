@@ -30,6 +30,7 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Home',
+          tabBarAccessibilityLabel: 'Home Tab',
           tabBarIcon: ({ color }) => (
             <IconSymbol size={28} name="house.fill" color={color} />
           ),
@@ -39,6 +40,7 @@ export default function TabLayout() {
         name="envelope"
         options={{
           title: 'Envelope',
+          tabBarAccessibilityLabel: 'Envelope Tab',
           tabBarIcon: ({ color }) => (
             <IconSymbol size={28} name="envelope.fill" color={color} />
           ),
@@ -48,6 +50,7 @@ export default function TabLayout() {
         name="browser"
         options={{
           title: 'Browser',
+          tabBarAccessibilityLabel: 'Browser Tab',
           tabBarIcon: ({ color }) => (
             <IconSymbol size={28} name="network" color={color} />
           ),
@@ -57,6 +60,7 @@ export default function TabLayout() {
         name="server"
         options={{
           title: 'Server',
+          tabBarAccessibilityLabel: 'Server Tab',
           tabBarIcon: ({ color }) => (
             <IconSymbol
               size={28}

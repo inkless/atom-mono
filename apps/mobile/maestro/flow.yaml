@@ -1,6 +1,9 @@
 appId: com.atomux.app.preview
 ---
-- launchApp
+- launchApp:
+    appId: 'com.atomux.app.preview'
+    clearState: true
+    clearKeychain: true
 # Note: conditional subFlow does not work in EAS
 # - runFlow:
 #     when:
@@ -10,15 +13,20 @@ appId: com.atomux.app.preview
 - assertVisible: 'Your token: auto-sign-token'
 - tapOn: 'Sign Out'
 - tapOn: 'Sign In with Browser'
-- tapOn: 'Continue'
+- runFlow:
+    when:
+      visible: 'Continue'
+      platform: iOS
+    commands:
+      - tapOn: 'Continue'
 - tapOn: 'my-token-123'
 - inputText: 456
 - tapOn: Atom Signin
 - tapOn: Sign In
-- tapOn: Envelope, tab, 2 of 4
+- tapOn: Envelope Tab
 - tapOn: Envelope Home with Cookie Share
 - assertVisible: session=my-token-123456
 - tapOn: Onboard
 - tapOn: About
-- tapOn: Envelope
+- tapOn: Envelope Tab
 - runFlow: auth/signout.yaml
