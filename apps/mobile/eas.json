@@ -34,7 +34,7 @@
     "build-and-maestro-test": {
       "extends": "preview",
       "withoutCredentials": true,
-      "config": "build-and-maestro-test.yml",
+      "config": "build-and-maestro-test.yaml",
       "ios": {
         "simulator": true,
         "image": "latest"
