@@ -1,0 +1,22 @@
+name: Build and E2E Tests
+
+on:
+  push:
+    branches:
+      # - '*'
+      # apply to main only for now
+      - 'main'
+      - 'e2e/**'
+
+jobs:
+  build:
+    type: build
+    params:
+      platform: ios
+      profile: ios-simulator-preview
+  end-to-end-test:
+    needs: [build]
+    type: maestro
+    params:
+      build_id: ${{ needs.build.outputs.build_id }}
+      flow_path: ['./maestro/flow.yaml']

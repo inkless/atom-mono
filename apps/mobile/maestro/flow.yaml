@@ -1,10 +1,11 @@
 appId: com.atomux.app.preview
 ---
 - launchApp
-- runFlow:
-    when:
-      notVisible: 'Sign In'
-    file: auth/signout.yaml
+# Note: conditional subFlow does not work in EAS
+# - runFlow:
+#     when:
+#       notVisible: 'Sign In'
+#     file: auth/signout.yaml
 - tapOn: 'Sign In'
 - assertVisible: 'Your token: auto-sign-token'
 - tapOn: 'Sign Out'
