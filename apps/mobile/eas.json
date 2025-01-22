@@ -31,6 +31,15 @@
         "EXPO_PUBLIC_API_URL": "https://atom-web-phi.vercel.app/api"
       }
     },
+    "build-and-maestro-test": {
+      "extends": "preview",
+      "withoutCredentials": true,
+      "config": "build-and-maestro-test.yml",
+      "ios": {
+        "simulator": true,
+        "image": "latest"
+      }
+    },
     "ios-simulator": {
       "extends": "development",
       "ios": {
