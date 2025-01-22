@@ -2,7 +2,13 @@ name: Build and E2E Tests
 
 on:
   push:
-    branches: ['*']
+    branches:
+      # - '*'
+      # apply to main only for now
+      - 'main'
+  pull_requests:
+    branches:
+      - 'e2e/**'
 
 jobs:
   build:

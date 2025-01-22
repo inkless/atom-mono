@@ -1,6 +1,7 @@
 appId: com.atomux.app.preview
 ---
 - launchApp
+# Note: conditional subFlow does not work in EAS
 # - runFlow:
 #     when:
 #       notVisible: 'Sign In'
