@@ -1,16 +1,16 @@
-appId: com.atomux.app.dev
+appId: com.atomux.app.preview
 ---
 - launchApp
 - runFlow:
     when:
       notVisible: 'Sign In'
     file: auth/signout.yaml
-- tapOn: "Sign In"
-- assertVisible: "Your token: auto-sign-token"
-- tapOn: "Sign Out"
-- tapOn: "Sign In with Browser"
-- tapOn: "Continue"
-- tapOn: "my-token-123"
+- tapOn: 'Sign In'
+- assertVisible: 'Your token: auto-sign-token'
+- tapOn: 'Sign Out'
+- tapOn: 'Sign In with Browser'
+- tapOn: 'Continue'
+- tapOn: 'my-token-123'
 - inputText: 456
 - tapOn: Atom Signin
 - tapOn: Sign In
@@ -21,4 +21,3 @@ appId: com.atomux.app.dev
 - tapOn: About
 - tapOn: Envelope
 - runFlow: auth/signout.yaml
-
