@@ -1,0 +1,14 @@
+build:
+  name: Download and run Maestro tests in Android
+  steps:
+    - eas/checkout
+    - run:
+        name: Download app
+        command: |
+          curl -OL https://expo.dev/artifacts/eas/afbkKiToMcsFcdnTrpy7rF.apk
+          mv afbkKiToMcsFcdnTrpy7rF.apk AtomPreview.apk
+    - eas/maestro_test:
+        inputs:
+          flow_path: |
+            ./maestro/flow.yaml
+          app_path: AtomPreview.apk

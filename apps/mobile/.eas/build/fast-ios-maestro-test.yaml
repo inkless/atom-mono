@@ -1,0 +1,14 @@
+build:
+  name: Download and run Maestro tests in iOS
+  steps:
+    - eas/checkout
+    - run:
+        name: Download app
+        command: |
+          curl -OL https://expo.dev/artifacts/eas/eBY9auqiS7xM3yC1ssnuES.tar.gz
+          tar -zxvf eBY9auqiS7xM3yC1ssnuES.tar.gz
+    - eas/maestro_test:
+        inputs:
+          flow_path: |
+            ./maestro/flow.yaml
+          app_path: AtomPreview.app
