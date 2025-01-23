@@ -35,6 +35,10 @@
       "extends": "preview",
       "withoutCredentials": true,
       "config": "build-and-maestro-test.yaml",
+      "android": {
+        "buildType": "apk",
+        "image": "latest"
+      },
       "ios": {
         "simulator": true,
         "image": "latest"
