@@ -1,5 +1,4 @@
-appId: com.atomux.app.dev
+appId: com.atomux.app.preview
 ---
-- tapOn: Home, tab, 1 of 4
-- tapOn: "Sign Out"
-
+- tapOn: Home Tab
+- tapOn: 'Sign Out'
