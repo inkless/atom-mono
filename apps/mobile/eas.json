@@ -44,6 +44,23 @@
         "image": "latest"
       }
     },
+    "fast-ios-maestro-test": {
+      "extends": "ios-simulator-preview",
+      "withoutCredentials": true,
+      "config": "fast-ios-maestro-test.yaml",
+      "ios": {
+        "image": "latest"
+      }
+    },
+    "fast-android-maestro-test": {
+      "extends": "preview",
+      "withoutCredentials": true,
+      "config": "fast-android-maestro-test.yaml",
+      "android": {
+        "buildType": "apk",
+        "image": "ubuntu-22.04-jdk-17-ndk-r26b"
+      }
+    },
     "ios-simulator": {
       "extends": "development",
       "ios": {
