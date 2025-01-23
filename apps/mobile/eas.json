@@ -35,6 +35,10 @@
       "extends": "preview",
       "withoutCredentials": true,
       "config": "build-and-maestro-test.yaml",
+      "android": {
+        "buildType": "apk",
+        "image": "ubuntu-22.04-jdk-17-ndk-r26b"
+      },
       "ios": {
         "simulator": true,
         "image": "latest"
