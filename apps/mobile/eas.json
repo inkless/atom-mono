@@ -45,21 +45,12 @@
       }
     },
     "fast-ios-maestro-test": {
-      "extends": "ios-simulator-preview",
-      "withoutCredentials": true,
-      "config": "fast-ios-maestro-test.yaml",
-      "ios": {
-        "image": "latest"
-      }
+      "extends": "build-and-maestro-test",
+      "config": "fast-ios-maestro-test.yaml"
     },
     "fast-android-maestro-test": {
-      "extends": "preview",
-      "withoutCredentials": true,
-      "config": "fast-android-maestro-test.yaml",
-      "android": {
-        "buildType": "apk",
-        "image": "ubuntu-22.04-jdk-17-ndk-r26b"
-      }
+      "extends": "ios-simulator-preview",
+      "config": "fast-android-maestro-test.yaml"
     },
     "ios-simulator": {
       "extends": "development",
