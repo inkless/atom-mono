@@ -1,0 +1,21 @@
+name: E2E Tests using Existing Build
+
+# on:
+#   push:
+#     branches:
+#       - 'main'
+
+jobs:
+  latest_ios_build:
+    name: Get Build
+    type: get-build
+    params:
+      platform: ios
+      profile: ios-simulator-preview
+      simulator: true
+  end-to-end-test:
+    needs: [latest_ios_build]
+    type: maestro
+    params:
+      build_id: ${{ needs.latest_ios_build.outputs.build_id }}
+      flow_path: ['./maestro/flow.yaml']
