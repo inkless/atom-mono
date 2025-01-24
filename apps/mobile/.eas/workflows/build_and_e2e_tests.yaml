@@ -41,9 +41,9 @@ jobs:
       platform: ios
       profile: ios-simulator-preview
   end-to-end-test:
-    after: [build]
+    after: [existing_build, build]
     type: maestro
     image: latest
     params:
-      build_id: ${{ job.existing_build.outputs.build_id || job.build.outputs.build_id }}
+      build_id: ${{ after.existing_build.outputs.build_id || after.build.outputs.build_id }}
       flow_path: ['./maestro/flow.yaml']
