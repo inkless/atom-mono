@@ -9,6 +9,7 @@ appId: com.atomux.app.preview
 #     when:
 #       notVisible: 'Sign In'
 #     file: auth/signout.yaml
+- startRecording: recording
 - tapOn: 'Sign In'
 - assertVisible: 'Your token: auto-sign-token'
 - tapOn: 'Sign Out'
@@ -30,3 +31,4 @@ appId: com.atomux.app.preview
 - tapOn: About
 - tapOn: Envelope Tab
 - runFlow: auth/signout.yaml
+- stopRecording
