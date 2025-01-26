@@ -15,6 +15,7 @@ appId: com.atomux.app.preview
 - tapOn: 'Sign In'
 - assertVisible: 'Your token: auto-sign-token'
 - tapOn: 'Sign Out'
+- takeScreenshot: SignInScreen
 - tapOn: 'Sign In with Browser'
 - runFlow:
     when:
@@ -27,6 +28,7 @@ appId: com.atomux.app.preview
 - tapOn: Atom Signin
 - tapOn: Sign In
 - tapOn: Envelope Tab
+- takeScreenshot: EnvelopeScreen
 - tapOn: Envelope Home with Cookie Share
 - assertVisible: session=my-token-123456
 - tapOn: Onboard

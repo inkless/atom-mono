@@ -16,6 +16,7 @@ jobs:
   end-to-end-test:
     needs: [latest_ios_build]
     type: maestro
+    image: latest
     params:
       build_id: ${{ needs.latest_ios_build.outputs.build_id }}
       flow_path: ['./maestro/flow.yaml']
