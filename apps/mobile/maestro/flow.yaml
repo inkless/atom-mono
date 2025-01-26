@@ -6,17 +6,18 @@ appId: com.atomux.app.preview
     appId: 'com.atomux.app.preview'
     clearState: true
     clearKeychain: true
-- evalScript: ${output.maestroResultPath = MAESTRO_RESULT_PATH || '.'}
+# TODO - replace with MAESTRO_TESTS_DIR once it's landed on EAS
+- evalScript: ${output.maestroTestsDir = MAESTRO_RESULT_PATH || '.'}
 # Note: conditional subFlow does not work in EAS
 # - runFlow:
 #     when:
 #       notVisible: 'Sign In'
 #     file: auth/signout.yaml
-- startRecording: ${output.maestroResultPath}/recording
+- startRecording: ${output.maestroTestsDir}/recording
 - tapOn: 'Sign In'
 - assertVisible: 'Your token: auto-sign-token'
 - tapOn: 'Sign Out'
-- takeScreenshot: ${output.maestroResultPath}/SignInScreen
+- takeScreenshot: ${output.maestroTestsDir}/SignInScreen
 - tapOn: 'Sign In with Browser'
 - runFlow:
     when:
@@ -29,7 +30,7 @@ appId: com.atomux.app.preview
 - tapOn: Atom Signin
 - tapOn: Sign In
 - tapOn: Envelope Tab
-- takeScreenshot: ${output.maestroResultPath}/EnvelopeScreen
+- takeScreenshot: ${output.maestroTestsDir}/EnvelopeScreen
 - tapOn: Envelope Home with Cookie Share
 - assertVisible: session=my-token-123456
 - tapOn: Onboard
