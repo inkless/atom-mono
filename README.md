@@ -10,20 +10,26 @@ npm i -g turbo
 ```
 
 ### iOS Setup
+
 - Download XCode from AppStore
 - Link Cocoapods
+
 ```
 brew install cocoapods
 # Below is optional if you ran into error above
-brew link --overwrite cocoapods 
+brew link --overwrite cocoapods
 ```
 
 ### Android Setup
+
 - Download JDK Zulu
+
 ```
 brew install --cask zulu@17
 ```
+
 - Setup JAVA_HOME
+
 ```
 # I just comment out my current one
  export JAVA_HOME=/Users/eileen.yau/Library/Java/JavaVirtualMachines/semeru-21.0.3/Contents/Home
@@ -31,8 +37,7 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 ```
 
 - Optional Android Studio
-Swap Gradle JDK with zulu-17 in `Execution, Deployment > Build Tools > Gradle`
-
+  Swap Gradle JDK with zulu-17 in `Execution, Deployment > Build Tools > Gradle`
 
 ## Get started
 
@@ -41,6 +46,22 @@ Swap Gradle JDK with zulu-17 in `Execution, Deployment > Build Tools > Gradle`
 ```bash
 pnpm i
 ```
+
+Note: If you are also a web-ux developer, you may have this in your `~/.npmrc`:
+
+```npmrc
+registry=https://registry.affirm-stage.com/artifactory/api/npm/npm
+```
+
+You may want to either comment it out, or change it to:
+
+```npmrc
+@affirm:registry=https://registry.affirm-stage.com/artifactory/api/npm/npm
+```
+
+We are seeing issues with our own registry using sha1 rather than sha512 for integrity check,
+the sha1 algorithm has some security vulnerabilities, it also increases tons of merger conflicts.
+We are looking for a better fix moving forward, but in the meantime, please use the above .npmrc
 
 2. Build a development client
 
@@ -81,4 +102,3 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-
